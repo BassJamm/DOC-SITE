@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[713],{3457:e=>{e.exports=JSON.parse('[{"label":"KB","permalink":"/blog/tags/kb","count":1},{"label":"Azure","permalink":"/blog/tags/azure","count":1},{"label":"Permissions","permalink":"/blog/tags/permissions","count":1}]')}}]);
