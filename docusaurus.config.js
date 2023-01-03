@@ -111,6 +111,10 @@ const config = {
                 label: 'GitHub',
                 href: 'https://github.com/ITJamm',
               },
+              {
+                label: 'Docusaurus',
+                href: 'https://docusaurus.io/docs',
+              },
             ],
           },
         ],
@@ -120,6 +124,8 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      metadata: [{name: 'keywords', content: 'IT, blog, Microsoft, Azure, Computers'}],
+    // This would become <meta name="keywords" content="cooking, blog"> in the generated HTML
     }),
 };
 

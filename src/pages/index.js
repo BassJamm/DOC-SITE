@@ -13,14 +13,8 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <h1 className="hero__title">{'Welcome'}</h1>
-        <p className="hero__subtitle">{"I'm an IT professional, currently working as an Infrastructure Engineer.This website is a portfolio of my work and what I've learned over time. Please check out my GitHub and GitBooks repositories linked at the top. "}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Resources
-          </Link>
-        </div>
+        <p className="hero__subtitle">{"I'm an IT professional, currently working as an Infrastructure Engineer. This website is a portfolio of my work and what I've learned over time. Please check out my GitHub and GitBooks repositories linked at the top. "}</p>
+        <p className="hero__subtitle">{"Check out the links up top for my GitHub, Knowledge Base and Blog. "}</p>
       </div>
     </header>
   );
@@ -31,7 +25,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="Welcome to IT Jamm, a place to share knowledge about IT. <head />">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
