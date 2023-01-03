@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"What is Automation in Azure?","permalink":"/blog/What is Automation in Azure"},{"title":"Azure Permission & Resource Management","permalink":"/blog/Azure Permission & Resource Management"}]}')}}]);
