@@ -22,6 +22,9 @@ const config = {
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
+
+  plugins: [require.resolve('docusaurus-lunr-search')],
+  
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -123,6 +126,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ['powershell'],
       },
       metadata: [{name: 'keywords', content: 'IT, blog, Microsoft, Azure, Computers'}],
     // This would become <meta name="keywords" content="cooking, blog"> in the generated HTML

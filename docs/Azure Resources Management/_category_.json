@@ -1,0 +1,8 @@
+{
+  "label": "Azure Resources Management",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Articles all about Azure Resource Management."
+  }
+}
