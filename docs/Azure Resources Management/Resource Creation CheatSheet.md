@@ -1,8 +1,8 @@
 ---
 sidebar_position: 5
-id: Automation Account Setup Cheatsheet
-title: Automation Account Setup Cheatsheet
-tags: [Azure]
+id: Resource Creation CheatSheet
+title: Resource Creation CheatSheet
+tags: [Azure, Resource Creation, CheatSheet]
 ---
 
 [Microsoft doc - Create a standalone Azure Automation account](https://learn.microsoft.com/en-gb/azure/automation/automation-create-standalone-account?tabs=azureportal).

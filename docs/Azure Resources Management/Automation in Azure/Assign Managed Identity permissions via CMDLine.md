@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 2
 id: Assign Managed Identity permissions via CMDLine
 title: Assign Managed Identity permissions via CMDLine
 tags: [Azure]

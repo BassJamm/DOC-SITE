@@ -1,87 +1,68 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 id: Azure SQL Server setup cheatsheet
 title: Azure SQL Server setup cheatsheet
-tags: [Azure]
+tags: [Azure, Resource Creation, CheatSheet]
 ---
+
+[Microsoft link - Azure SQL documentation](https://learn.microsoft.com/en-gb/azure/azure-sql/?view=azuresql)
 
 ## 1. Before you begin
 
-- If the customer does not specify, work with them to ascertain best size\shape of VM.
-- If required run through the cost and dependancies on the build.
-- Estimate build time and get approval to create the resources.
-- Build the resources.
-- Create Subscription.
-- Created Resources Group.
-- Create Instance.
-- Setup Monitoring and Alerts.
-- Setup backups if needed.
-- Enable any security features required.
-- Testing.
-- Pass back to customer.
+:::info
 
-## 2. Suggested pre-requisit information gathering
+This information is down to personal experience and issues that I have come across when dealing with a customer requesting a new resource.
 
-If the customer does not know the answer the questions below, we should define as much as possible to make our lives easier.
+:::
 
-1. **Intended workload**, could the instance be reduced to a PaaS offering, to reduce managemnt and cost overheads.
-2. **Chose the shape and size of instance**, if it must stay as a IaaS offering, you can build full SQL server instance on a Windows VM, this will be the most costly. There isAzure SQL server as a PaaS offering though and and intermediary option too.
-3. **Networking**, does a new vNet need creating or will it be added to a current one.
-4. **Resiliancy of the instance**, does it need to be replecatied across DCs or Regions?
-5. **Backups**, any specific needs for backups.
-6. **Cost**, is this authorised already or do you need to provide some cost estimations, [Azure Pricing calculator](https://azure.microsoft.com/en-gb/pricing/calculator/) is here. Advise the customer that additional shape and size changes may incurr costs down the line. Suggest reservations if the workload is not to change.
-7. **Subscription**, where resources will be placed or, will a new one need to be created.
-8. **Resource Group**, is there one to be created or does one exist. Resources should be grouped together by life cycle.
-9. **Tags**, tags are useful for billing, reporting and segregating resources. [Suggested naming conventions here](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/decision-guides/resource-tagging/?toc=%2Fazure%2Fazure-resource-manager%2Fmanagement%2Ftoc.json).
+1. **Define the workload**, this will help understand the size of the resource needed, consider growth over time as well.
+2. **Costing**, be prepared to provide estimates and justify the need to your solution; pay as you go is all well and good but, it can mount up quick.
+3. **Consider dependancies** before you starting the build, for example:
+   1. Do you need a new Subscription?
+   2. Do you need to create a Resources Group?
+   3. **Network Connectivity**, do you need a private endpoint and network connectivity?
+      1. Do you need people to connect externally to the resources?
+   4. **Monitoring and Alerting**, what needs setting,?
+   5. **Backups**, do you need them\it?
+   6. **Security**, what features need to be enabled?
+   7. **Resiliency**, does the resource and depedant resources need to be resilient?
+   8.  **Tags**, tags are useful for billing, reporting and segregating resources. [Suggested naming conventions here](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/decision-guides/resource-tagging/?toc=%2Fazure%2Fazure-resource-manager%2Fmanagement%2Ftoc.json).
+4. **Data Sovereignty**, no good setting up resiliency to a region outside of the customer location if it's not allowed to be there!
+5. **Estimate build time** and get approval to create any resources.
+6. **Testing**, consider as well, how you will test out the build.
+   1.  Do you have test data to migrate as part of this work?
 
-## 3. Recommendations for building the instance
+## 2. Other recommendations
 
-### 3.1. Subscription
+### 2.1. Naming Conventions
 
-**Name this appropriately** based on it's purpose.
+:::tip
 
-- If it hosts production resources, name it Prodiction.
-- If it hosts developement resources, name it Developement.
-- If it hosts resources for a particular application or solution, name it after that app or solution.
+The below bullet points apply to the Subsciption, Resource Group and the SQL resource. Almost nothing in Azure can be renamed after creation. You'll have to delete and start over.
 
-### 3.2. Resource Group
+Names must be in lowercase, Azure does not support uppercase names.
 
-- Resource Groups are logical containers that group resources together.
+:::
+
+**Name objects appropriately** based on it's purpose.
+
+- If it hosts production resources, include Production\Prod in the name.
+- If it hosts developement resources, include Development\Dev in the name.
+- If it hosts resources for a particular application or solution, include that app or solution name.
+- Example naming convention, "Company"-"environment type"-"Region"-"Resource information".
+
+### 2.2. Resource grouping
+
 - **Resources within** Resource Groups should **share the same** product **life cycle**.
 - Many resources **cannot be moved between groups** after they've been created.
+- Example naming convention, "Company"-"environment type"-"Region"-"Resource information".
 
-**Naming** a RG **is permenant and cannot be amended** after the fact, base the name on what it is hosting, I suggest added something for the location of the RG as well.
+###  2.3. SQL Server Creation
 
-Examplesbelow:
+- **Authentication method**, where apprproate, use both SQL and Azure AD, that covers both sides unless the user specifies otherwise.
+- **Networking**, the default rule will allow Azure resources from the customer tenant and all other Azure tenants to reach this resource.
 
--  "Company"-"environment type"-"Region"-"Resource information".
+###  2.4. Monitoring
 
-> Note that Resource Groups and subscriptions can have upper and lower case, instances\apps are all lower-case only.
-
-###  3.3. SQL Server Creation
-
-#### 3.3.1. Basics
-
-1. Subscription to host resources.
-2. Resource Group name.
-3. Resource Name.
-4. Region (Location).
-5. Authentication method. Where apprproate, use both SQL and Azure AD, that covers both sides unless the user specifies otherwise.
-
-#### 3.3.2. Networking
-
-Allow Azure services and resources to acces this server.
-
-> The defaul rule will allow Azure resources from the customer tenant and all other Azure tenants to reach this resource.
-
-### 3.4. Azure SQL Database Creation
-
-This resource sits within the Azure SQL Server above in some cases, if this is asked for, you do not need to answer the above questions 1-4 again.
-
-If the customer does not know, we should define where this sits. By Microsoft recomendation, resrouces should sit in a resource group together than share the same life cycle.
-
-> Names must be in lowercase, Azure does not support uppercase names.
-
-## 4. Monitoring
-
-- This area needs updating.
+- You can create Alerts in the Azure portal much like any other resource. You'll be required to pick from the "suggested" metrics. [Microsoft docs link - Create alerts for Azure SQL Database](https://learn.microsoft.com/en-gb/azure/azure-sql/database/alerts-insights-configure-portal?view=azuresql).
+- You can monitor SQL Databases with Azure Monitor, [Microsoft docs link - Monitor Azure SQL Database with Azure Monitor](https://learn.microsoft.com/en-gb/azure/azure-sql/database/monitoring-sql-database-azure-monitor?view=azuresql).

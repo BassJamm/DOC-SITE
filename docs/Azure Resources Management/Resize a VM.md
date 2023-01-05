@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 4
 id: Resizing a Virtual Machine
 title: Resizing a Virtual Machine
-tags: [Azure]
+tags: [Azure, Virtual Machine]
 ---
 
 ## 1. Before you begin
@@ -14,15 +14,15 @@ tags: [Azure]
 
 ## 2. Re-siging the vm
 
-Open the Azure portal.
-Open the page for the virtual machine.
+:::danger  De-allocating a VM can cause issues!
+De-allocating the VM also releases any dynamic IP addresses assigned to the VM. The OS and data disks are not affected. 
 
-![Resizing the VM](./../../static/img/ReSizeVM-01.png)
+At the same time, you're releasing your ownership of the size of that VM.  If you are resizing a production VM, consider using Azure Capacity Reservations to reserve Compute capacity in the region; otherwise you may have to pick another size.
+:::
 
-In the left menu, select Size.
-
-> Note: De-allocating the VM also releases any dynamic IP addresses assigned to the VM. The OS and data disks are not affected. If you are resizing a production VM, consider using Azure Capacity Reservations to reserve Compute capacity in the region.
-
-![Stopping the VM](./../../static/img/ReSizeVM-02.png)
-
-Pick a new size from the list of available sizes and then select Resize.
+1. **Open** the Azure portal, https://portal.azure.com.
+2. **Search** for your virtual machine.
+3. ![Resizing the VM](./../../static/img/ReSizeVM-01.png)
+4. In the left menu, **Select Size**.
+5. ![Stopping the VM](./../../static/img/ReSizeVM-02.png)
+6. **Choose the new size** from the list of available sizes and then **Select Resize**.
