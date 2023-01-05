@@ -1,41 +1,75 @@
 ---
-sidebar_position: 5
-id: Resource Creation CheatSheet
-title: Resource Creation CheatSheet
+sidebar_position: 3
+id: Resource Creation Cheatsheet
+title: Resource Creation Cheatsheet
 tags: [Azure, Resource Creation, CheatSheet]
 ---
 
-[Microsoft doc - Create a standalone Azure Automation account](https://learn.microsoft.com/en-gb/azure/automation/automation-create-standalone-account?tabs=azureportal).
+[Microsoft link - Azure SQL documentation](https://learn.microsoft.com/en-gb/azure/azure-sql/?view=azuresql)
 
-## 1. Creating the Automation Account
+## 1. Before you begin
 
-### 1.1. Considerations
+:::info
 
-- Naming convention.
-- Purpose of the Automation Account.
-- Will it need a Managed identity?
+This information is down to personal experience and issues that I have come across when dealing with a customer requesting a new resource.
 
-**Naming conventions** matter in Azure because you cannot change the name after the resource has been created, suggsted naming convention would be `aa-<company name>-<region>-<workload type>-<resource>-<number>`, this would translate to `aa-wh-uks-prod-automationacc-001`.
+:::
 
-The same can be said of the Resource Group, a suggested name could be `rg-wh-uks-prod-Automation-001`.
+1. **Define the workload**, this will help understand the size of the resource needed, consider growth over time as well.
+2. **Costing**, be prepared to provide estimates and justify the need to your solution; pay as you go is all well and good but, it can mount up quick.
+3. **Consider dependancies** before you starting the build, for example:
+   1. Do you need a new Subscription?
+   2. Do you need to create a Resources Group?
+   3. **Network Connectivity**, do you need a private endpoint and network connectivity?
+      1. Do you need people to connect externally to the resources?
+   4. **Monitoring and Alerting**, what needs setting,?
+   5. **Backups**, do you need them\it?
+   6. **Security**, what features need to be enabled?
+   7. **Resiliency**, does the resource and depedant resources need to be resilient?
+   8.  **Tags**, tags are useful for billing, reporting and segregating resources. [Suggested naming conventions here](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/decision-guides/resource-tagging/?toc=%2Fazure%2Fazure-resource-manager%2Fmanagement%2Ftoc.json).
+4. **Data Sovereignty**, no good setting up resiliency to a region outside of the customer location if it's not allowed to be there!
+5. **Estimate build time** and get approval to create any resources.
+6. **Testing**, consider as well, how you will test out the build.
+   1.  Do you have test data to migrate as part of this work?
 
-**Purpose of the resource** is also important, are you going to use the resource for patch management, is it being specifically used for a particalar solution or workload? 
+## 2. Other recommendations
 
-> Importantly, will it be created and possibly deleted along with other resources; in which case it can live in the same resource group as those resources.
+### 2.1. Naming Conventions
 
-**A Managed identity** will be needed should the Automation Account need to authenticate to carry out any tasks. It will also be tied to the lifecycle of the Automation account.
+:::tip
 
-### 1.2. Creation steps
+The below bullet points apply to the Subsciption, Resource Group and the SQL resource. Almost nothing in Azure can be renamed after creation. You'll have to delete and start over.
 
-[Microsoft doc - Create a new Automation account in the Azure portal](https://learn.microsoft.com/en-gb/azure/automation/automation-create-standalone-account?tabs=azureportal#create-a-new-automation-account-in-the-azure-portal).
+Names must be in lowercase, Azure does not support uppercase names.
 
-#### 1.2.1. Using a system-assigned managed identity
+:::
 
-[Microsoft doc - Using a system-assigned managed identity for an Azure Automation account](https://learn.microsoft.com/en-gb/azure/automation/enable-managed-identity-for-automation).
+**Name objects appropriately** based on it's purpose.
 
-## 2. Notes
+- If it hosts production resources, include Production\Prod in the name.
+- If it hosts developement resources, include Development\Dev in the name.
+- If it hosts resources for a particular application or solution, include that app or solution name.
+- Example naming convention, "Company"-"environment type"-"Region"-"Resource information".
 
-### 2.1. Managed Identity
+### Size and Sku
 
-- You'll find the managed Identity itself under **Enterprise App Registrations**.
-- You cannot assign Azure AD or Microsoft Graph roles to the System Managed Identity through the GUI, you must do this from command line. [See here for more info](./Assign%20Managed%20Identity%20permissions%20via%20CMDLine.md).
+- **Triple check the sizes available** using the Azure portal, the Azure pricing calculator has no awareness of what is actaully available in a region.
+
+### 2.2. Resource grouping
+
+- **Resources within** Resource Groups should **share the same** product **life cycle**.
+- Many resources **cannot be moved between groups** after they've been created.
+- Example naming convention, "Company"-"environment type"-"Region"-"Resource information".
+
+###  2.4. Monitoring
+
+- You can create Alerts in the Azure portal much like any other resource. You'll be required to pick from the "suggested" metrics. [Microsoft docs link - Create alerts for Azure SQL Database](https://learn.microsoft.com/en-gb/azure/azure-sql/database/alerts-insights-configure-portal?view=azuresql).
+- You can monitor SQL Databases with Azure Monitor, [Microsoft docs link - Monitor Azure SQL Database with Azure Monitor](https://learn.microsoft.com/en-gb/azure/azure-sql/database/monitoring-sql-database-azure-monitor?view=azuresql).
+
+## Resource Specific Notes
+
+### Azure SQL Server and Database
+
+- **Authentication method**, where apprproate, use both SQL and Azure AD, that covers both sides unless the user specifies otherwise.
+- **Network Connectivity**, this can be a bit of a mess for SQL servers and Databases in Azure, I'd suggest digging into this a bit to see what fits best for your deplyment. By default, the databse\sql server will be contactable by any resource in your Azure tenant provided it's not on a VNet already.
+  - External connectivity can be done through the network settings on the resource as is basically direct connect if no Private endpoint is setup.
