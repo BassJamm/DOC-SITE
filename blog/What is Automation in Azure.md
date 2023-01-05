@@ -5,7 +5,7 @@ author: itjamm
 tags: [BlogPost, Automation]
 ---
 
-## What is Automation in Azure?
+## 1. What is Automation in Azure?
 
 Automation is needed, almost required, in three general areas of cloud operations;
 <!--truncate-->
@@ -17,28 +17,28 @@ Automation is needed, almost required, in three general areas of cloud operation
 
 Using any one of the three above can be a huge improvement to the working quality of life of the team and can save huge amounts of time if implemented well. Firstly you need to get your team on board with this approach, which can present its own challenge.
 
-## Pros and Cons of the Automation Approach
+## 2. Pros and Cons of the Automation Approach
 
 I may well be a little biased here but, in my experience, if the status quo is to prefer manual tasks. It will be hard going initially to get others to see the light that is automating away "their" jobs. I use quote marks there because, the typical Infrastructure role is changing rapidly.
 
-### Pros
+### 2.1. Pros
 
 - Reduce time to perform an action.
 - Reduce risk in performing the action.
 - Freeing up staff from the burden of manual tasks.
 - Standardisation of tasks.
 
-### Cons
+### 2.2. Cons
 
 - Time consuming to implement in the first instance.
 - Staff need training on the automation methods.
 - You may encounter resistance when it comes to changing the status quo.
 
-## Tools at your disposal
+## 3. Tools at your disposal
 
 A very brief overview of the various tools that can be used, my first suggestion is to investigate the use of PowerShell and RunBooks; they've always seemed to make the most sense to start with.
 
-### PowerShell
+### 3.1. PowerShell
 
 This is an incredibly versatile tool that can be used to manage almost any resource on-prem and in the cloud. I'd suggest digging into the [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/) and also familiarising yourself with the Office 365 modules too ([SharePoint Online](https://learn.microsoft.com/en-us/powershell/sharepoint/?view=sharepoint-ps), [Exchange Online](https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell-v2?view=exchange-ps), [Microsoft Teams](https://learn.microsoft.com/en-us/microsoftteams/teams-powershell-overview), [Azure Active Directory](https://learn.microsoft.com/en-us/powershell/azure/active-directory/overview?view=azureadps-2.0), more in-depth KBs and posts to follow on these.
 
@@ -46,13 +46,13 @@ You aren't just restricted to using PowerShell from your machine running the Win
 
 Learn more about PowerShell [here](https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.3).
 
-### Azure Bicep
+### 3.2. Azure Bicep
 
 Bicep is a declarative language, used to deploy Azure resources. In a Bicep file, you define what you want to deploy to Azure and then use that file to repeatedly deploy your infrastructure. It's a great tool to ensure consistency in your environments although, this is a separate language to learn and only applies to Azure.
 
 You can learn more about Bicep [here](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview?tabs=bicep).
 
-### Azure Logic Apps
+### 3.3. Azure Logic Apps
 
 Logic Apps is a cloud platform\service where you can create and run workflows in Azure (there's an Office 365 version with a cut-down toolset called Power Automate which is also really good). The major plus of using these is that they require little to no code at all to set up, it's all visual.
 

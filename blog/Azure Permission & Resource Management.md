@@ -13,7 +13,7 @@ For the most part, us techies will learn from the group up starting from on-prem
 
 Now we've got those two down, time to shove another layer on top which is the permissions inside Azure, hopefully the below can simplify this for you.
 
-## The 4 management levels
+## 1. The 4 management levels
 
 The below is nothing original by the way, I've lifted it and re-written the concepts into another format from a Microsoft docs article here, you may prefer their version.
 
@@ -27,7 +27,7 @@ The below is nothing original by the way, I've lifted it and re-written the conc
 
 **Resources** are instances of services that you can create.
 
-## Managing Access to resources
+## 2. Managing Access to resources
 
 We should always plan for the least privileges required to allow a team to work, the permission model in Azure is designed to allow this however, I'd say it is so granular that it generates more work that necessary in most cases.
 
@@ -43,7 +43,7 @@ You can also control Service Desk team access using Change Control. Asking them 
 
 Speaking from experience, I'd highly recommend trusting your Infrastructure team to have the Contributor role at the Subscription level where possible. It will make a lot of difference to all teams "quality of life" if they've access to someone who can carry out actions they cannot.
 
-## Resource tagging
+## 3. Resource tagging
 
 Tags can be an absolute godsent and can help you to quickly identify your resources and resource groups. You apply tags to your Azure resources and resource groups to logically organize them into categories.  
 
