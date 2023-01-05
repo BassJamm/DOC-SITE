@@ -5,8 +5,6 @@ author: itjamm
 tags: [BlogPost, Automation]
 ---
 
-## 1. What is Automation in Azure?
-
 Automation is needed, almost required, in three general areas of cloud operations;
 <!--truncate-->
 **Deployment and management of resources** - To deliver a repeatable and consistent infrastructure.
