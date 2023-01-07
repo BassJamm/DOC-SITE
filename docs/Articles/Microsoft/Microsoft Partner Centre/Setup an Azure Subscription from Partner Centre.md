@@ -30,14 +30,14 @@ Who'll be supporting this subscription?
 6. On the Customers page, select the customer. If you have only one customer, the selection is unavailable.
 7. In the left menu, under Products + services, select All billing subscriptions.
 8. On the Azure subscription page, select + Add to create a subscription.
-    ![Azure Subscritpion Creation](../../static//img/Create-CSP-AZ-Sub-03.png)
+    ![Azure Subscritpion Creation](../../../../static/img/Create-CSP-AZ-Sub-03.png)
 9. Then select the type of subscription to add. For example, Usage based/ Azure subscription.
 10. On the Basics tab, enter a subscription name.
 11. Select the partner's billing account.
 12. Select the partner's billing profile.
 13. Select the customer that you're creating the subscription for and, if applicable, select a reseller.
 14. Next to Plan, select Microsoft Azure Plan for DevTest, if the subscription will be used for development or testing workloads. Otherwise, select Microsoft Azure Plan.
-    ![Creating the subscription](../../static//img/Create-CSP-AZ-Sub-05.png)
+    ![Creating the subscription](../../../../static/img/Create-CSP-AZ-Sub-05.png)
 15. Optionally, select the Tags tab and then enter tag pairs for Name and Value.
 16. Select Review + create. You should see a message stating Validation passed.
 17. Verify that the subscription information is correct, then select Create. You'll see a notification that the subscription is getting created.

@@ -1,11 +1,9 @@
 ---
-sidebar_position: 3
+sidebar_position: 1
 id: Prettier Terminal Window
 title: Prettier Terminal Window
 tags: [PowerShell, Admin]
 ---
-
-
 
 This isn't original material, please check out the links below to the location of where I found the information:
 

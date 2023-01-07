@@ -43,7 +43,7 @@ The Windows device **MUST** have a stable internet connection to complete this p
 1. Make sure the **machine is powered on** and **connected to an internet source**.
 2. The Autopilot process should start automatically.
 3. When the option appears, **select Windows Autopilot provisioning**. Autopilot should take over from here and reset the device.
-   1. ![Autopilot reset](../../static/img/Autopilot-Reset-onTheDevice-001.png)
-   2. ![device setup](../../static/img/Autopilot-Reset-onTheDevice-002.png)
+   1. ![Autopilot reset](../../../../static/img/Autopilot-Reset-onTheDevice-001.png)
+   2. ![device setup](../../../../static/img/Autopilot-Reset-onTheDevice-002.png)
 
 Once the above completes you should then be returned to a normal looking Windows login prompt.

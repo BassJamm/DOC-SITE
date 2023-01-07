@@ -22,7 +22,7 @@ At the same time, you're releasing your ownership of the size of that VM.  If yo
 
 1. **Open** the Azure portal, https://portal.azure.com.
 2. **Search** for your virtual machine.
-3. ![Resizing the VM](./../../static/img/ReSizeVM-01.png)
+3. ![Resizing the VM](../../../../static/img/ReSizeVM-01.png)
 4. In the left menu, **Select Size**.
-5. ![Stopping the VM](./../../static/img/ReSizeVM-02.png)
+5. ![Stopping the VM](../../../../static/img/ReSizeVM-02.png)
 6. **Choose the new size** from the list of available sizes and then **Select Resize**.

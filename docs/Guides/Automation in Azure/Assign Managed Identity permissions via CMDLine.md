@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
-id: Assign Managed Identity permissions via CMDLine
-title: Assign Managed Identity permissions via CMDLine
+id: Assign Managed Identity permissions
+title: Assign Managed Identity permissions
 tags: [Azure]
 ---
 - [Refernce for where this came from](https://aztoso.com/security/microsoft-graph-permissions-managed-identity/.)
