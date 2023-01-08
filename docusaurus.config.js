@@ -53,6 +53,8 @@ const config = {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
+          blogTitle: 'IITJamms blog',
+          blogDescription: 'A tech blog powered by Docusaurus!',
           postsPerPage: 'ALL',
         },
         theme: {

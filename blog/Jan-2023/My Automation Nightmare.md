@@ -2,15 +2,19 @@
 slug: My-Automation-Nightmare
 title: My Automation Nightmare
 description: My Automation Nightmare
-author: itjamm
+date: 01/07/2023
+authors: itjamm
+draft: false
 tags: [Azure, Automation Account, PowerShell, Managed Identities]
+keywords: [Azure, Automation, PowerShell, Managed Identities]
 hide_table_of_contents: false
 ---
-How the hell do I automate a script in Azure?!?
+
+## How the hell do I automate a script in Azure?!?
 
 Buckle up, this is probably going to be a long one, hopefully, by the end of it, you'll have a good idea of where to start with the problem of automating script in Azure.
 <!--truncate-->
-You got a few options here for automating scripts in Azure, [check out this post for the other options available to you here](../blog/What%20is%20Automation%20in%20Azure.md),you've got Azure Functions, Logic Apps and Automation accounts. In this case, the scenario is PowerShell scripts and the tool I'm going to setup is an Automation account.
+You got a few options here for automating scripts in Azure, [check out this post for the other options available to you here](../blog//dec-2022/../../Dec-2022/What%20is%20Automation%20in%20Azure.md),you've got Azure Functions, Logic Apps and Automation accounts. In this case, the scenario is PowerShell scripts and the tool I'm going to setup is an Automation account.
 
 :::note Document incoming
 
