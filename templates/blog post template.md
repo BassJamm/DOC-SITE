@@ -3,7 +3,7 @@ slug: URL
 title: Document Title
 description: Describe me.
 image:
-authors: itjamm
+authors: i
 draft:
 tags: []
 keywords:

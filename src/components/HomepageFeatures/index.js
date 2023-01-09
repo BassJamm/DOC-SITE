@@ -23,12 +23,11 @@ const FeatureList = [
     ),
   },
   {
-    title: 'The Blog',
+    title: 'My Website',
     Svg: require('@site/static/img/laptop-document-and-file-12489.svg').default,
     description: (
       <>
-        I hope to post my thoughts and small updates here, 
-        I hope there is something of value.
+        I will be creating an online portflio of projects and other tid bits of info about, check it out if you're interested.
       </>
     ),
   },

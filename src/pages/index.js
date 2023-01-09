@@ -13,8 +13,9 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <h1 className="hero__title">{'Welcome'}</h1>
-        <p className="hero__subtitle">{"I'm an IT professional, currently working as an Infrastructure Engineer. This website is a portfolio of my work and what I've learned over time. Please check out my GitHub and GitBooks repositories linked at the top. "}</p>
-        <p className="hero__subtitle">{"Check out the links up top for my GitHub, Knowledge Base and Blog. "}</p>
+        <p className="hero__subtitle">{"Hi, I've been working in IT for a while now and wanted to set up a place for me to store bits of information I've amassed in my career and thought that rather than hoarding it all to myself, I'd stick it up online instead. "}</p>
+        <p className="hero__subtitle">{"Check out the links up top for my GitHub and my Knowledge Base. "}</p>
+        <p className="hero__subtitle">{"Happy reading and I hope I can solve an issue for you! "}</p>
       </div>
     </header>
   );
@@ -25,7 +26,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Welcome to IT Jamm, a place to share knowledge about IT. <head />">
+      description="Welcome to The IT KB, a place where I dump all my IT Info! <head />">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

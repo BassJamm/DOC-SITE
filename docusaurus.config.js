@@ -6,17 +6,17 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'IT Jamm',
+  title: 'The IT KB',
   tagline: '',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://theitkb.co.uk',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/jam-favicon.png',
+  favicon: 'img/favicon-book.png',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'ITJamm', // Usually your GitHub org/user name.
+  organizationName: 'TheITKB', // Usually your GitHub org/user name.
   projectName: 'KB-Project', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -47,16 +47,10 @@ const config = {
         },
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/', // Serve the docs at the site's root
           // Please change this to your repo.
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          blogTitle: 'IITJamms blog',
-          blogDescription: 'A tech blog powered by Docusaurus!',
-          postsPerPage: 'ALL',
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -68,23 +62,23 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'IT JAMM',
+        title: 'The IT Knowledge base',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/jam-logo.png',
+          src: 'img/favicon-book.png',
         },
         items: [
           {
             type: 'doc',
-            docId: 'Welcome to the Wiki',
+            docId: 'Welcome',
             position: 'right',
             label: 'Docs',
           },
-          {to: '/blog',
-          label: 'Blog',
-          position: 'right'},
+         // {to: '/blog',
+         // label: 'Blog',
+          //position: 'right'},
           {
-            href: 'https://github.com/ITJamm',
+            href: 'https://github.com/BassJamm',
             label: 'GitHub',
             position: 'right',
           },
@@ -93,15 +87,6 @@ const config = {
       footer: {
         style: 'light',
         links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Knowledge base',
-                to: '/docs/Welcome to the Wiki',
-              },
-            ],
-          },
           {
             title: 'Helpful Links',
             items: [
@@ -119,12 +104,8 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'GitHub',
-                href: 'https://github.com/ITJamm',
+                href: 'https://github.com/BassJamm',
               },
               {
                 label: 'Docusaurus',
@@ -140,7 +121,7 @@ const config = {
         darkTheme: darkCodeTheme,
         additionalLanguages: ['powershell'],
       },
-      metadata: [{name: 'keywords', content: 'IT, blog, Microsoft, Azure, Computers'}],
+      metadata: [{name: 'keywords', content: 'IT, KnowledgeBase, Microsoft, Azure, Computers'}],
     // This would become <meta name="keywords" content="cooking, blog"> in the generated HTML
     }),
 };
