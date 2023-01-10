@@ -1,13 +1,13 @@
 ---
 sidebar_position: 2
-id: Manage Active Directory with PowerShell
-title: Manage Active Directory with PowerShell
+id: OnPrem Active Directory
+title: OnPrem Active Directory
 tags: [PowerShell, AD]
 ---
 
-# Manging AD with PowerShell
+# Manging On-Prem Active Directory via PowerShell
 
-## Filter by an attribute
+## Get-ADUser: Filter by attribute
 
 ```powershell
 
