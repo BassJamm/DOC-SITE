@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
-id: AzCli Cheatsheet
-title: AzCli Cheatsheet
-tags: [AzureCli, CheatSheet]
+sidebar_position: 2
+id: Azure Active Directory
+title: Azure Active Directory
+tags: [AzureAD, Command Line]
 ---
 
 This document is supposed to be a cheatsheet of commands useful when using the Azure Cli.
