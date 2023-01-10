@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 6
 id: Windows OS and Apps
 title: Windows OS and Apps
 tags: [Command Line, PowerShell, CMD]

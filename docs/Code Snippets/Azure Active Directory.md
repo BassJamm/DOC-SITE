@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 id: Azure Active Directory
 title: Azure Active Directory
 tags: [AzureAD, Command Line]

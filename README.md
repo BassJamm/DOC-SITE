@@ -1,3 +1,3 @@
 # Document Site
 
-My website for hosting docs, code and blog posts.
+My website for hosting docs, code and blog posts. 

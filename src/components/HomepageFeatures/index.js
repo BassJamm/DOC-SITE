@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/laptop-online-education-12493.svg').default,
     description: (
       <>
-        Check out the Knowledge Base for articles and tutorials.
+        Check out the Knowledge Base for articles and tutorials. Link's at the top of the page.
       </>
     ),
   },

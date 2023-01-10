@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 id: Miscellaneous Code
 title: Miscellaneous Code
 tags: [template]

@@ -94,10 +94,6 @@ const config = {
                 label: 'Microsoft Docs',
                 href: 'https://learn.microsoft.com/en-in/docs/',
               },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/it_jamm',
-              },
             ],
           },
           {

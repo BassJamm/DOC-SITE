@@ -30,3 +30,9 @@ Each doc may or may not contain personal notes that may appear on other resource
 ### Tooling
 
 - Are notes on tools that I use day to day in my job and at home that I think are cool.
+
+## Contact Me
+
+You can reach me at the below email address should you want to.
+
+WillH@theitkb.co.uk
