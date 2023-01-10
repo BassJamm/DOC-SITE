@@ -48,3 +48,9 @@ $emailusername = "email.address@domain.com"
 $encrypted = Get-Content "C:\temp\encrypted_password_for_reporting.txt" | ConvertTo-SecureString
 $credential = New-Object System.Management.Automation.PsCredential($emailusername, $encrypted)
 ```
+
+## 1.3. Remove-Variable
+
+```powershell
+Remove-Variable * -ErrorAction SilentlyContinue
+````

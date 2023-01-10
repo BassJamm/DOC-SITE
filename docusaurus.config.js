@@ -115,7 +115,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['powershell'],
+        additionalLanguages: ['powershell','bicep'],
       },
       metadata: [{name: 'keywords', content: 'IT, KnowledgeBase, Microsoft, Azure, Computers'}],
     // This would become <meta name="keywords" content="cooking, blog"> in the generated HTML

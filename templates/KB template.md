@@ -2,7 +2,7 @@
 sidebar_position: 
 id: document iD
 title: document title
-tags: [template]
+tags: [template, KB]
 ---
 
 # Welcome
