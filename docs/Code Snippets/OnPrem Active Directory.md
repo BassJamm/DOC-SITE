@@ -5,9 +5,9 @@ title: OnPrem Active Directory
 tags: [PowerShell, AD, Command Line]
 ---
 
-# 1. Manging On-Prem Active Directory via PowerShell
+# Manging On-Prem Active Directory via PowerShell
 
-## 1.1. Get-ADUser: Filter by attribute
+## Get-ADUser: Filter by attribute
 
 ```powershell
 # Filter mail address is like & the user has to be enabled.
@@ -16,7 +16,7 @@ Get-ADUser -Filter "Mail -like '*@<domain>co.uk' -and enabled -eq '$true'" | Sel
 # Fitler where user is disabled.
 Get-ADUser -Filter 'enabled -eq $false' | Select name, DistinguishedName
 ```
-## 1.2. Get password last reset time
+## Get password last reset time
 
 ```powershell
 # Collect all users, searching for the passlastset property, select the objects Name and Password Last Set, Export to a local appdata folder.

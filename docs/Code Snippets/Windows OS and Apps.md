@@ -5,9 +5,9 @@ title: Windows OS and Apps
 tags: [Command Line, PowerShell, CMD]
 ---
 
-# 1. Manage Windows OS and Apps via Command Line
+# Manage Windows OS and Apps via Command Line
 
-## 1.1. Set office update channel
+## Set office update channel
 
 ```powershell
 <# 
@@ -26,7 +26,7 @@ OfficeC2RClient.exe /changesetting Channel=Current
 OfficeC2RClient.exe /update user
 ```
 
-## 1.2. Time Stamped Ping
+## Time Stamped Ping
 
 :::caution
 Not completely finished this script, may require some logic checks before useing.
@@ -50,7 +50,7 @@ Start-Sleep -Seconds 30
 Start-Job -ScriptBlock { test-connection "DESTINATION LOCATION" -count "ENTER HOW MANY TIMES YOU WANT THIS TO REPEAT" | format-table -AutoSize @{n='TimeStamp';e={Get-Date}},__SERVER, Address, ProtocolAddress, ResponseTime | Out-File -FilePath $env:USERPROFILE\Downloads\Time_Stamp_Ping_<CHANGE ME TO SOMETHING MORE USEFUL>.txt}
 ```
 
-## 1.3. Folder size report
+## Folder size report
 
 ```powershell
 $startFolder = "C:\FolderName"
@@ -62,9 +62,9 @@ $i.FullName + ” — ” + “{0:N2}” -f ($subFolderItems.sum / 1GB) + ” GB
 }
 ````
 
-## 1.4. Windows Device Troubleshooting
+## Windows Device Troubleshooting
 
-### 1.4.1. Collect Azure AD Info
+### Collect Azure AD Info
 
 ```powershell
 <#
@@ -94,7 +94,7 @@ systeminfo | Select-String -Pattern 'System Boot Time' | Out-File -Append -FileP
 systeminfo | Select-String -Pattern 'Time Zone' | Out-File -Append -FilePath C:\SystemDiagnosticCollection\System-Information.txt
 systeminfo | Select-String -Pattern 'Total Physical Memory' | Out-File -Append -FilePath C:\SystemDiagnosticCollection\System-Information.txt
 ```
-### 1.4.2. Collect Device troubleshooting info
+### Collect Device troubleshooting info
 
 ```powershell
 <# Script to collect machine information during troubleshooting & save these into a zip file for engineer to extract.
@@ -149,7 +149,7 @@ Write-host 'Gathered GPO status'
 Compress-Archive -Path C:\SystemDiagnosticCollection C:\SystemDiagnosticCollectio\SystemDiagnostics.zip
 Write-host 'Zip file created within C:\SystemDiagnosticCollection folder.'
 ```
-### 1.4.3. Collect Network troubleshooting info
+### Collect Network troubleshooting info
 
 ```powershell
 <# Script to collect machine information during troubleshooting & save these into a zip file for engineer to extract.

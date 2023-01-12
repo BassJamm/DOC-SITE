@@ -7,7 +7,7 @@ tags: [PartnerCentre]
 
 Description: Setup an Azure Subscription within Partner Centre for a customer. This has the added benefit of creating the PAL or DPOR link to earn partner credit.
 
-## 1.1. Before you begin
+## Before you begin
 
 Who'll manage this subscription?
 
@@ -18,7 +18,7 @@ Who'll be supporting this subscription?
 - Will it be added to BAU.
 - What Groups and\or accounts need to manage it, (Owner, Contributor, Reader).
 
-## 1.2. Setup Process
+## Setup Process
 
 [Microsoft Link](https://docs.microsoft.com/en-us/azure/cost-management-billing/manage/create-customer-subscription#create-a-subscription-as-a-partner-for-a-customer).
 

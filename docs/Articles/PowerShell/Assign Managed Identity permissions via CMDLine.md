@@ -7,7 +7,7 @@ tags: [Azure]
 - [Refernce for where this came from](https://aztoso.com/security/microsoft-graph-permissions-managed-identity/.)
 - [Microsoft reference for command](https://learn.microsoft.com/en-us/powershell/module/azuread/new-azureadserviceapproleassignment?view=azureadps-2.0).
 
-## 1. The command
+## The command
 
 ```powershell
 
@@ -37,7 +37,7 @@ New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId -ResourceId $GraphSe
 ```
 Annotated the hell out of it as the command really confused me.
 
-## 2. Notes
+## Notes
 
 - It takes a few minutes for this change to show in the GUI.
 - If the permission already exists the promtp will error on the final command.

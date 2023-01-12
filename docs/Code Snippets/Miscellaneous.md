@@ -5,9 +5,9 @@ title: Miscellaneous Code
 tags: [template]
 ---
 
-# 1. Random snippets of useful code
+# Random snippets of useful code
 
-## 1.1. Direct Send to email
+## Direct Send to email
 
 ```powershell
 # Get the credential
@@ -31,7 +31,7 @@ $mailParams = @{
 Send-MailMessage @mailParams
 ```
 
-## 1.2. Store encrypted credentials
+## Store encrypted credentials
 
 Try the section above in conjuction with this to store the credentials for the account that is sending the email.
 
@@ -49,7 +49,7 @@ $encrypted = Get-Content "C:\temp\encrypted_password_for_reporting.txt" | Conver
 $credential = New-Object System.Management.Automation.PsCredential($emailusername, $encrypted)
 ```
 
-## 1.3. Remove-Variable
+## Remove-Variable
 
 ```powershell
 Remove-Variable * -ErrorAction SilentlyContinue

@@ -6,7 +6,7 @@ tags: [Intune, Autopilot, Reset Device]
 ---
 Description: Perform an AutoPilot Reset on a Windows Device.
 
-## 1. Before you start
+## Before you start
 
 :::info
 Ignore this step if you know you do not use group tags.
@@ -26,7 +26,7 @@ Sometimes group tags within Autopilot are used to assign device profiles\policie
 **Wait** for the profile status to change to assigned before progressing, this is automatic and in my experience can take up to 30 minutes.
 :::
 
-## 2. Initiate the reset
+## Initiate the reset
 
 :::tip
 The Windows device **MUST** have a stable internet connection to complete this process.
@@ -38,7 +38,7 @@ The Windows device **MUST** have a stable internet connection to complete this p
 4. Click the **Autopilot Reset option**.
 5. Click **Yes**.
 
-## 3. On the device
+## On the device
 
 1. Make sure the **machine is powered on** and **connected to an internet source**.
 2. The Autopilot process should start automatically.

@@ -5,7 +5,7 @@ title: Create an Automation Account
 tags: [Azure, Automation, Scripting]
 ---
 
-## 1. Outline
+## Outline
 
 1. Setup the Resource Group and Automation Account.
 2. Setup the Identity for the Automation Account, this is key to running scripts gainst Azure Active Directoy and Office 365 resources. 
@@ -14,7 +14,7 @@ tags: [Azure, Automation, Scripting]
 5. Write ourselves a little script. 
 6. Setup a schedule for the Runbook.
 
-## 2. Setup the Resource Group and Automation Account.
+## Setup the Resource Group and Automation Account.
 
 :::tip
 For naming conventions I'd suggest review [my other article on it, Click here.](../../Articles/Microsoft/Azure%20Resources%20Management/Resource%20Creation%20CheatSheet.md)
@@ -43,7 +43,7 @@ Make sure you Select the same region as the resources you want to query, if the 
 You'll need to assign Azure ADroles and App Permissions to the System or User managed Identity, Microsoft have decided not to make this easy and it needs to be done via command line, [I've documented a script here to help with this](../../Articles/PowerShell/Assign%20Managed%20Identity%20permissions%20via%20CMDLine.md)
 :::
 
-## 3. Setup Automation Runbook
+## Setup Automation Runbook
 
 1. Sign in to the Azure portal.
 2. **Search for** and Select **Automation Accounts**.
@@ -56,7 +56,7 @@ You'll need to assign Azure ADroles and App Permissions to the System or User ma
    4.  Enter applicable Description
 6.  Click Create to create the runbook.
 
-## 4. Install any Modules
+## Install any Modules
 
 1. Sign in to the Azure portal.
 2. **Search for** and Select **Automation Accounts**.
@@ -71,16 +71,16 @@ You may find that you have to search around a bit for the module that you do act
 Microsoft Graph is probably the most well rounded module but, it's quite finicky to use, otherwise stick with the Az Command line.
 :::
 
-## 5. Test Script
+## Test Script
 
-### 5.1. Enter Script
+### Enter Script
 
 1. Navigate to your runbook.
 2. **Click Edit** at the top.
 3. Here you can **enter your script**.
 4. On the left-hand side, the most useful thing is the CMDLETS option, which you can use to find commands from the installed modules.
 
-### 5.2. Test Script
+### Test Script
 
 Once your done and ready to test.
 1. **Click on Test pane** at the top.
@@ -131,7 +131,7 @@ Set-AzureStorageBlobContent -Context $Context -Container $ContainerName -File "$
 If you need to output to a different storage type, such as an Azure files file share, just update the final line in the script and the variable at the top $ContainerName value.
 :::
 
-## 6. Setup the Schedule
+## Setup the Schedule
 
 This has been mostly regurgitated from [this Microsoft link here.](https://learn.microsoft.com/en-us/azure/automation/shared-resources/schedules#create-a-new-schedule-in-the-azure-portal)
 
@@ -155,11 +155,11 @@ Example schedule below
 
 ![Modules blade location](../../../static/img/Create-an-automation-account/autoacc-Schedule-setup-001.jpg)
 
-## 7. Testing
+## Testing
 
-### 7.1. Testing the script
+### Testing the script
 
-#### 7.1.1. Error handling
+#### Error handling
 
 The test pane window for the most part will not output useful errors or show you how the script is running. I'd suggest building error handling and status updates into your script if you wish during debugging, it will help immensely.
 
@@ -179,7 +179,7 @@ I'd also suggest using `write-output` all over the place to confirm progress and
 
 > Shout out to the VS code module for Automation Accounts, it'll let you pull down the runbook contents and edit in VsCode and upload it again.
 
-### 7.2. Confirm the data export
+### Confirm the data export
 
 1. Navigate to your **storage account**.
 2. Click on the **File shares or Containers option**, wherever you saved your data to.
@@ -187,7 +187,7 @@ I'd also suggest using `write-output` all over the place to confirm progress and
    1. ![Modules blade location](../../../static/img/Create-an-automation-account/autoacc-testing-exporteddata-002.jpg)
 4. **Click View\edit**, it should display a basic output of the file.
 
-## 8. Further notes
+## Further notes
 
 - Run As accounts are being deprecated, this method is by far the easiest to use when trying to pull info from AzureAD and Office 365.
 

@@ -14,7 +14,7 @@ This document is for setting backup policeis for Virutal Machines only. If you n
 :::
 
 
-## 1. Create the below resources in the FW-Azure Production subscription
+## Create the below resources in the FW-Azure Production subscription
 
 :::info
 
@@ -27,7 +27,7 @@ Use whatever naming conention fits in with what's being used already, I am just 
 3. **Create a log analytics workspace** or reuse another one, for example, `la-<customername>-<region>-<prod/dev>-backup-01`.
 
 
-## 2. Configure Backup Policy
+## Configure Backup Policy
 
 Configure the backup policy in-line with whatever standard is being used already, my suggestions are below.
 
@@ -42,7 +42,7 @@ Configure the backup policy in-line with whatever standard is being used already
 
 ![Backup Policy Example](../../../../static/img/AZ-Bkup-Policy-Create-01.png)
 
-## 3. Configure Alerting
+## Configure Alerting
 
 :::tip
 
@@ -64,7 +64,7 @@ Configure diagnostic logs to be sent from Azure Backup to the Log Anlytics works
 4. Example of this below.
 5. ![Example notification config](../../../../static/img/AZ-Bkup-exmpl-Notification-policy-01.png)
 
-## 4. Configure Diagnostic log collection
+## Configure Diagnostic log collection
 
 Configure diagnostic logs to be sent from Azure Backup to the Log Anlytics workspace above.
 

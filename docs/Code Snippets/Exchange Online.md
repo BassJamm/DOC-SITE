@@ -5,9 +5,9 @@ title: Exchange Online
 tags: [Command Line, Exchange Online, PowerShell]
 ---
 
-# 1. Exchange Online Commands
+# Exchange Online Commands
 
-## 1.1. Get-Calendar Permissions
+## Get-Calendar Permissions
 
 ```powershell
 # Manually connect to Exchange Online.
@@ -25,7 +25,7 @@ foreach($user in $userObject){
     Get-MailboxFolderPermission -Identity $calendar | Export-csv -Append $env:USERPROFILE\Downloads\calendar-perms.csv
 }
 ```
-## 1.2. Set-Calendar permssions
+## Set-Calendar permssions
 
 ```powershell
 # Manually connect to Exchange Online.

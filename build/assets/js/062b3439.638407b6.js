@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[2743],{8023:e=>{e.exports=JSON.parse('{"label":"template","permalink":"/tags/template","allTagsPath":"/tags","count":1,"items":[{"id":"Code Snippets/Miscellaneous Code","title":"Miscellaneous Code","description":"1.1. Direct Send to email","permalink":"/Code Snippets/Miscellaneous Code"}]}')}}]);

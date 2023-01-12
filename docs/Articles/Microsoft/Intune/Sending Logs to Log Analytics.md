@@ -6,7 +6,7 @@ tags: [Intune]
 ---
 Microsoft Article - [Send log data to storage, event hubs, or log analytics in Intune](https://learn.microsoft.com/en-us/mem/intune/fundamentals/review-logs-using-azure-monitor)
 
-## 1.1. Logs that can be ingested
+## Logs that can be ingested
 
 Microsoft Intune includes built-in logs that provide information about your environment:
 
@@ -15,15 +15,15 @@ Microsoft Intune includes built-in logs that provide information about your envi
 - **Device Compliance Organizational Logs** show an organizational report for device compliance in Intune, and details on non-compliant devices.
 - **IntuneDevices** show device inventory and status information for Intune enrolled and managed devices.
 
-## 1.2. Notes
+## Notes
 
-### 1.2.1. Benefits
+### Benefits
 
 - The main benefit of using Log Analytics is the visualisation, monitoring, and alerting on the connected data.
 - Archive the data to review at a later date.
 - Stream the logs into Azure Event hub for review in other 3rd party tools.
 
-### 1.2.2. Cons (Sort of)
+### Cons (Sort of)
 
 **All** of the above logs can be found within the Intune portal, `login to EndPoint Manager (Intune) > Devices > Monitor`.
 

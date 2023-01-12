@@ -5,7 +5,7 @@ title: Restore from Snapshot
 tags: [Azure, Restore, SnapShot]
 ---
 
-## 1. Create your snapshot
+## Create your snapshot
 
 :::tip Validate the Snapshot
 
@@ -39,7 +39,7 @@ If you see the error below, change the Host Caching option to "none".
 
 ![Host Caching error](../../../../static/img/Detach_Disk_Error01.png)
 
-## 2. Confirm disk is visibile in the OS
+## Confirm disk is visibile in the OS
 
 :::tip
 
@@ -53,7 +53,7 @@ The share should be available from the get go however, you may need to bring the
 
 You should now see it in File Explorer.
 
-## 3. Detach the disk
+## Detach the disk
 
 1. **Close any open sessions** to the disk that you attached.
 2. Navigate back to the VM in Azure Management Portal.

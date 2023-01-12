@@ -7,7 +7,7 @@ tags: [Azure, Resource Creation, CheatSheet]
 
 [Microsoft link - Azure SQL documentation](https://learn.microsoft.com/en-gb/azure/azure-sql/?view=azuresql)
 
-## 1. Before you begin
+## Before you begin
 
 :::info
 
@@ -32,9 +32,9 @@ This information is down to personal experience and issues that I have come acro
 6. **Testing**, consider as well, how you will test out the build.
    1.  Do you have test data to migrate as part of this work?
 
-## 2. Other recommendations
+## Other recommendations
 
-### 2.1. Naming Conventions
+### Naming Conventions
 
 :::tip
 
@@ -55,13 +55,13 @@ Names must be in lowercase, Azure does not support uppercase names.
 
 - **Triple check the sizes available** using the Azure portal, the Azure pricing calculator has no awareness of what is actaully available in a region.
 
-### 2.2. Resource grouping
+### Resource grouping
 
 - **Resources within** Resource Groups should **share the same** product **life cycle**.
 - Many resources **cannot be moved between groups** after they've been created.
 - Example naming convention, "Company"-"environment type"-"Region"-"Resource information".
 
-###  2.4. Monitoring
+###  Monitoring
 
 - You can create Alerts in the Azure portal much like any other resource. You'll be required to pick from the "suggested" metrics. [Microsoft docs link - Create alerts for Azure SQL Database](https://learn.microsoft.com/en-gb/azure/azure-sql/database/alerts-insights-configure-portal?view=azuresql).
 - You can monitor SQL Databases with Azure Monitor, [Microsoft docs link - Monitor Azure SQL Database with Azure Monitor](https://learn.microsoft.com/en-gb/azure/azure-sql/database/monitoring-sql-database-azure-monitor?view=azuresql).
