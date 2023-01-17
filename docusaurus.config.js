@@ -82,26 +82,22 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
+          {
+            href: 'https://gist.github.com/BassJamm',
+            label: 'GitHub Gists',
+            position: 'right',
+          },
         ],
       },
       footer: {
         style: 'light',
         links: [
           {
-            title: 'Helpful Links',
+            title: 'Helpful External Links',
             items: [
               {
                 label: 'Microsoft Docs',
                 href: 'https://learn.microsoft.com/en-in/docs/',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/BassJamm',
               },
               {
                 label: 'Docusaurus',
@@ -109,8 +105,21 @@ const config = {
               },
             ],
           },
+          {
+            title: 'My Stuff',
+            items: [
+              {
+                label: 'GitHub',
+                href: 'https://github.com/BassJamm',
+              },
+              {
+                label: 'GitHub Gists',
+                href: 'https://gist.github.com/BassJamm',
+              },
+            ],
+          },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} IT Jamm, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} The IT Knowledge Base, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
