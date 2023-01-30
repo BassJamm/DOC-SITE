@@ -30,6 +30,6 @@ I took my layout and information from this documentation idea, https://documenta
 
 ## Contact Me
 
-You can reach me at the below email address should you want to.
+You can reach me at the below email address should you want to or you can check out [my website](https://withwill.carrd.co/) for more information on me.
 
 WillH@theitkb.co.uk
