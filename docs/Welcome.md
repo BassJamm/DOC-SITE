@@ -1,4 +1,5 @@
 ---
+slug: /
 sidebar_position: 0
 Id: Welcome to the Wiki
 title: Welcome to the Wiki
@@ -15,21 +16,17 @@ Each doc may or may not contain personal notes that may appear on other resource
 
 ## Navigating the Wiki
 
-- Naviagte using the navbar on the left hand side.
-- There is a search bar in the top right, try searching keywords for what you're after.
-  
-### Guides
+- Navigate using the navbar on the left hand side.
 
-- Are deep dives into setting up certain technologies or solutions.
+:::tip Look out for these call outs.
+There is a search bar in the top right, try searching keywords for what you're after.
+:::
 
-### Articles
+I took my layout and information from this documentation idea, https://documentation.divio.com/introduction/.
 
-- Are help docs or small snippets of information.
-- I'd recommend using the search bar in the top right to search for related information.
-
-### Tooling
-
-- Are notes on tools that I use day to day in my job and at home that I think are cool.
+- Tutorials are lessons that take the reader by the hand through a series of steps to complete a project of some kind.
+- How-to guides take the reader through the steps required to solve a real-world problem.
+- Reference guides are technical descriptions of the machinery and how to operate it. Reference guides have one job only: to describe.
 
 ## Contact Me
 

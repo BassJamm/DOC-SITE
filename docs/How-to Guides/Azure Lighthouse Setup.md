@@ -1,7 +1,7 @@
 ---
-sidebar_position: 2
-id: Azure Lighthouse Setup
-title: Azure Lighthouse Setup
+sidebar_position: 1
+id: Setup Azure Lighthouse
+title: Setup Azure Lighthouse
 tags: [Guide, Azure, Lighthouse]
 ---
 

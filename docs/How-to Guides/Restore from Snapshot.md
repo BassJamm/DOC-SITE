@@ -17,17 +17,17 @@ Make sure to check the SnapShot is valid before starting this process.
 2. **Navigate to a VM** that is available to have a disk attached to it.
 3. **Click** on Disks on the left-hand side.
 4. **Create** a new disk.
-5. ![Attach the disk](../../../../static/img/Attach_Disk01.png)
+5. ![Attach the disk](../../static/img/Attach_Disk01.png)
 6. **Click Edit** on the far right hand side. As shown in red above.
 7. **Name your Disk**, I'd suggest, snapshot_ServerName_Date_Time
 8. Source, **Select snapshot**.
-9. ![Create a new disk2](../../../../static/img/ReSizeVM-02.png)
+9. ![Create a new disk2](../../static/img/ReSizeVM-02.png)
 10. **Select the Snapshot** you wish to attach.
-11. ![Select the snapshot](../../../../static/img/Attach_Disk02_05.png)
+11. ![Select the snapshot](../../static/img/Attach_Disk02_05.png)
 12. Make any changes to the Encryption Type.
 13. I'd suggest it **not** to be a shared disk.
 14. **Press Save**.
-15. ![Save the changes](../../../../static/img/Attach_Disk03.png)
+15. ![Save the changes](../../static/img/Attach_Disk03.png)
 
 This shouldn't take too long.
 
@@ -37,7 +37,7 @@ If you see the error below, change the Host Caching option to "none".
 
 :::
 
-![Host Caching error](../../../../static/img/Detach_Disk_Error01.png)
+![Host Caching error](../../static/img/Detach_Disk_Error01.png)
 
 ## Confirm disk is visibile in the OS
 
