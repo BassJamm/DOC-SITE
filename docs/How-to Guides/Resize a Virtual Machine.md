@@ -1,7 +1,7 @@
 ---
-sidebar_position: 4
-id: Resize a Virtual Machine
-title: Resize a Virtual Machine
+sidebar_position: 5
+id: Re-size a Virtual Machine
+title: Re-size a Virtual Machine
 tags: [Azure, Virtual Machine]
 ---
 
@@ -10,7 +10,9 @@ tags: [Azure, Virtual Machine]
 - Shutdown the VM from within it's OS if possible (Not always necessary at all but, nice to do).
 - If you cannot see the VM size that you're looking for it may not be compatible with your VM.
 
-> You can have too many disk or NICs attached to the VM for the size you want. The typ of disks that you have attached can limit your options, premium and standard tier.
+:::note
+You can have too many disk or NICs attached to the VM for the size you want. The type of disks that you have attached can limit your options, premium and standard tier.
+:::
 
 ## Re-sizing the vm
 

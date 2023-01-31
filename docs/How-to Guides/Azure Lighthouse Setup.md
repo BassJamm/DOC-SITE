@@ -65,7 +65,7 @@ I tried initially to setup groups for our finance team, so they'd be able to man
 Below is an outline and suggestion for each relevant configuratble options for the ARM template.
 
 :::caution On-boarding multiple Subscriptions or Resource Groups for one client\customer.
-You need separate deployments for each subscription being onboarded, even if you are onboarding subscriptions in the same customer tenant. The same is true for multiple different resourece groups within a single customer.
+You can delegate multiple resource groups and subscriptions to the same delegation from the Service Providers dashboard\blade in the customer tenant. The documentation for this may suggest otherwise but, it does work.
 :::
 
 ##### Offering Name

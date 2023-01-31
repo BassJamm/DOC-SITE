@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
-id: Restore from Snapshot
-title: Restore from Snapshot
+id: Restore data from a Snapshot
+title: Restore data from a Snapshot
 tags: [Azure, Restore, SnapShot]
 ---
 

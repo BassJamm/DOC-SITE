@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 id: Renew Apple Tokens and Certs
 title: Renew Apple Tokens and Certs
 tags: [KB, Intune, Apple, Certificate, VPP, MDM, APNS]

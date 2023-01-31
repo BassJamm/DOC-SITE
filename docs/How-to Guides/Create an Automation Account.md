@@ -44,6 +44,58 @@ Make sure you Select the same region as the resources you want to query, if the 
 You'll need to assign Azure ADroles and App Permissions to the System or User managed Identity, Microsoft have decided not to make this easy and it needs to be done via command line.
 :::
 
+## Apply permissions to Managed(System assigned) Identity
+
+You'll need to apply the permissions to the Managed Identity using PowerShell unfortunatly, a Microsoft seem to have decided to make this difficult for us!
+
+- [Reference for where this came from](https://aztoso.com/security/microsoft-graph-permissions-managed-identity/.)
+- [Microsoft reference for command](https://learn.microsoft.com/en-us/powershell/module/azuread/new-azureadserviceapproleassignment?view=azureadps-2.0).
+
+:::caution Role names
+You'll need to find the correct role\permission name that you want to assign using the script below. [Try this Microsoft doc for the Microosft Graph API permissions](https://learn.microsoft.com/en-us/graph/api/overview?view=graph-rest-1.0).
+:::
+
+## The command
+
+The below is a script you can run but, you can run it line by line to see what is going on if that's more comfortable. The general gist is that you are applying the permissions from the Microsoft Graph App to your Managed Identity.
+
+:::tip
+This same idea works for any of the Microsoft applications, each serivce has an application that is registered in your tenant. You can apply roles from any of them in theory.
+:::
+
+```powershell
+
+# Your tenant id.
+$TenantID="Add your tenant ID"
+# Microsoft Graph App ID (DON'T CHANGE).
+$GraphAppId = "00000003-0000-0000-c000-000000000000"
+# Name of the manage identity (same as the Logic App name).
+$DisplayNameOfMSI="Add display name of Enterprise App" 
+# Check the Microsoft Graph documentation for the permission you need for the operation.
+$PermissionName = "Add your permission here" 
+
+# Install the module (You need admin on the machine)
+Install-Module AzureAD 
+
+# Connect to Azure AD via tenant ID, you'll need an admin account to login with though.
+Connect-AzureAD -TenantId $TenantID
+# Collects the Target System Managed Identities information into the MSI variable.
+$MSI = (Get-AzureADServicePrincipal -Filter "displayName eq '$DisplayNameOfMSI'")
+Start-Sleep -Seconds 10
+# Store the Microsoft Graph API informaiton into the GraphServicePrincipal variable.
+$GraphServicePrincipal = Get-AzureADServicePrincipal -Filter "appId eq '$GraphAppId'"
+# Searches Microsoft Graph API for the value matching the PermissionName variable populated above and stores this in the AppRole Variable.
+$AppRole = $GraphServicePrincipal.AppRoles |  Where-Object {$_.Value -eq $PermissionName -and $_.AllowedMemberTypes -contains "Application"}
+# Assigned the permission from the Microsoft Graph API to the target Managed Identity.
+New-AzureADServiceAppRoleAssignment -ObjectId $MSI.ObjectId -ResourceId $GraphServicePrincipal.ObjectId -Id $appRole.Id -PrincipalId $MSI.ObjectId
+```
+Annotated the hell out of it as the command really confused me.
+
+:::tip Heads up!
+- It takes a few minutes for this change to show in the GUI.
+- If the permission already exists the prompt will error on the final command.
+:::
+
 ## Setup Automation Runbook
 
 1. Sign in to the Azure portal.

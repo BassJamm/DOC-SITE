@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 id: Perform an AutoPilot Reset
 title: Perform an AutoPilot Reset
 tags: [Intune, Autopilot, Reset Device]

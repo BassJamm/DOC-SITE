@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 7
 id: Setup an Azure Subscription from Partner Centre
 title: Setup an Azure Subscription from Partner Centre
 tags: [PartnerCentre]
@@ -11,7 +11,7 @@ Description: Setup an Azure Subscription within Partner Centre for a customer. T
 
 Who'll manage this subscription?
 
-- If it's being setup with the CSP in mind, it'll be the CSP.
+- If it's being setup with the CSP, it'll automatically be owned by the CSP.
 
 Who'll be supporting this subscription?
 

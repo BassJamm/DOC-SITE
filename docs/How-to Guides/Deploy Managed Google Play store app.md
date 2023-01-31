@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 id: Deploy Google Play store app
 title: Deploy Google Play store app
 tags: [KB, Intune, Google Play, App Deployment]
