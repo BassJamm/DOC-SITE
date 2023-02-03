@@ -1,38 +1,37 @@
 ---
+slug: /
 sidebar_position: 0
 Id: Welcome to the Wiki
 title: Welcome to the Wiki
 ---
 
-This documentation is an almagamation of my knowledge and experiences, to hopefully provide myself and others with refernce material for their jobs and hobbies.
+This documentation is an almagamation of my knowledge and experiences, to hopefully provide myself and others with reference material for their jobs and hobbies.
 
 Each doc may or may not contain personal notes that may appear on other resources on the internet, I will do my best to reference any and all source material that I use.
 
+## Navigating the Wiki
+
+- Navigate using the navbar on the left hand side.
+
+:::tip Look out for these call outs.
+There is a search bar in the top right, try searching keywords for what you're after.
+:::
+
+I took my layout and information from this documentation idea, https://documentation.divio.com/introduction/.
+
+- Tutorials are lessons that take the reader by the hand through a series of steps to complete a project of some kind.
+- How-to guides take the reader through the steps required to solve a real-world problem.
+- Reference guides are technical descriptions of the machinery and how to operate it. Reference guides have one job only: to describe.
+  
 ## How the site works 
 
 - The website is stored within a GitHub Repo, this is then copied over to a Static Web App hosted in Azure using a GitHub action.
 - The site is generated using [Docusaurus](https://docusaurus.io/), big shout to them for making this incredible beast!
 
-## Navigating the Wiki
 
-- Naviagte using the navbar on the left hand side.
-- There is a search bar in the top right, try searching keywords for what you're after.
-  
-### Guides
-
-- Are deep dives into setting up certain technologies or solutions.
-
-### Articles
-
-- Are help docs or small snippets of information.
-- I'd recommend using the search bar in the top right to search for related information.
-
-### Tooling
-
-- Are notes on tools that I use day to day in my job and at home that I think are cool.
 
 ## Contact Me
 
-You can reach me at the below email address should you want to.
+You can reach me at the below email address should you want to or you can check out [my website](https://withwill.carrd.co/) for more information on me.
 
 WillH@theitkb.co.uk
