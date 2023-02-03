@@ -20,7 +20,7 @@ tags: [KB, Intune, Google Play, App Deployment]
 7. **Accept the agreement** for what the application will have access to on the deice.
 8. For the next screen **select one of the two options** presented to you. For quality of life for your users, I'd select the top option "Keep approved when app requests new permissions."
 
-![App Deployment Ts&Cs](../../static/img/Google%20play%20log%20app%20deploy/Google-App-Deploy-001.png)
+![App Deployment Ts&Cs](../../../static/img/Google%20play%20log%20app%20deploy/Google-App-Deploy-001.png)
 
 9. **Click Sync** in the top left corner of the screen.
 
@@ -33,11 +33,11 @@ Go back the list of Android apps and you should see the new app appear shortly.
 3. Click **Groups**.
 4. Click **New Group**.
 5. Fill in the information, make sure to select **Dynamic Device** option under membership type.
-   1. ![App Deployment Ts&Cs](../../static/img/Google%20play%20log%20app%20deploy/AAD-Dynamic-group-set-001.png)
+   1. ![App Deployment Ts&Cs](../../../static/img/Google%20play%20log%20app%20deploy/AAD-Dynamic-group-set-001.png)
 6. Click **Add dynamic query** at the bottom.
 7. Add the two queries below to check the OS device type and the device ownership properties.
    1. `deviceOSType Equals AndroidEnterprise`.
    2. `deviceOwnership Equals Company`.
 8. 
 
-![App Deployment Ts&Cs](../../static/img/Google%20play%20log%20app%20deploy/Google-App-Deploy-002.png)
+![App Deployment Ts&Cs](../../../static/img/Google%20play%20log%20app%20deploy/Google-App-Deploy-002.png)

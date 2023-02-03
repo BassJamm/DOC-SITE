@@ -40,7 +40,7 @@ Configure the backup policy in-line with whatever standard is being used already
 - **Policy sub type**: Standard
 - **Suggested Name** format: `Bkup-policy-<time of day>-<policy type>` (example name: `bkup-policy-nightly-std`).
 
-![Backup Policy Example](../../static/img/AZ-Bkup-Policy-Create-01.png)
+![Backup Policy Example](../../../static/img/AZ-Bkup-Policy-Create-01.png)
 
 ## Configure Alerting
 
@@ -62,7 +62,7 @@ Configure diagnostic logs to be sent from Azure Backup to the Log Anlytics works
    3. **Notify**: Hourly digest
    4. **Severity**: Critical & Warning
 4. Example of this below.
-5. ![Example notification config](../../static/img/AZ-Bkup-exmpl-Notification-policy-01.png)
+5. ![Example notification config](../../../static/img/AZ-Bkup-exmpl-Notification-policy-01.png)
 
 ## Configure Diagnostic log collection
 

@@ -28,7 +28,7 @@ Run As accounts are being deprecated, managed identities are replacing this.
    1. Resource Group Name (Create one if needs be).
    2. Name.
    3. Region
-   4. ![Basic info](../../static/img//Create-an-automation-account/autoacc-Setup-install-001.jpg)
+   4. ![Basic info](../../../static/img//Create-an-automation-account/autoacc-Setup-install-001.jpg)
 
 :::caution
 Make sure you Select the same region as the resources you want to query, if the account is to query something else, like Azure AD or Office 365, the region is not so important.
@@ -37,7 +37,7 @@ Make sure you Select the same region as the resources you want to query, if the 
 5. Select the **Advanced tab** and Select the best option for you.
    1. **System assigned**, is attached to the automation account it lives and dies with the automation account resource.
    2. **User assigned**, is one you setup yourself in Azure AD and can be used by multiple resources and is completely seperate to your automation account.
-   3. ![Basic info](../../static/img/Create-an-automation-account/autoacc-Setup-install-002.jpg)
+   3. ![Basic info](../../../static/img/Create-an-automation-account/autoacc-Setup-install-002.jpg)
 6. Click **Review + Create** to setup the resource.
 
 :::tip
@@ -115,7 +115,7 @@ Annotated the hell out of it as the command really confused me.
 2. **Search for** and Select **Automation Accounts**.
 3. On the Automation Accounts page, **Select your Automation account** from the list.
 4. From the Automation account, **Select Modules** under Shared Resources.
-   1. ![Modules blade location](../../static/img/Create-an-automation-account/autoacc-Module-install-000001.jpg)
+   1. ![Modules blade location](../../../static/img/Create-an-automation-account/autoacc-Module-install-000001.jpg)
 5. In here you can see a list of currently installed modules and you can add more by Clicking on the +Add a module button.
 
 :::tip
@@ -211,7 +211,7 @@ You must publish the runbook before you can assign the schedule to it.
 
 Example schedule below
 
-![Modules blade location](../../static/img/Create-an-automation-account/autoacc-Schedule-setup-001.jpg)
+![Modules blade location](../../../static/img/Create-an-automation-account/autoacc-Schedule-setup-001.jpg)
 
 ## Testing
 
@@ -242,7 +242,7 @@ I'd also suggest using `write-output` all over the place to confirm progress and
 1. Navigate to your **storage account**.
 2. Click on the **File shares or Containers option**, wherever you saved your data to.
 3. Click into the share\container, **find your file** and Click on the **3 dots** to the right of it.
-   1. ![Modules blade location](../../static/img/Create-an-automation-account/autoacc-testing-exporteddata-002.jpg)
+   1. ![Modules blade location](../../../static/img/Create-an-automation-account/autoacc-testing-exporteddata-002.jpg)
 4. **Click View\edit**, it should display a basic output of the file.
 
 ## Further notes
