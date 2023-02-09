@@ -28,10 +28,10 @@ I took my layout and information from this documentation idea, https://documenta
 - The website is stored within a GitHub Repo, this is then copied over to a Static Web App hosted in Azure using a GitHub action.
 - The site is generated using [Docusaurus](https://docusaurus.io/), big shout to them for making this incredible beast!
 
-
-
 ## Contact Me
 
 You can reach me at the below email address should you want to or you can check out [my website](https://withwill.carrd.co/) for more information on me.
 
 WillH@theitkb.co.uk
+
+Site version 1.1
